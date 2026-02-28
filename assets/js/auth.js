@@ -44,3 +44,43 @@ function login(){
   setSession(email);
   window.location.href = "../index.html";
 }
+let currentOTP = "";
+
+function sendOTP(){
+
+const email = document.getElementById("email").value;
+
+if(email === ""){
+
+alert("Enter email first");
+
+return;
+
+}
+
+currentOTP = Math.floor(100000 + Math.random()*900000);
+
+localStorage.setItem("otp", currentOTP);
+
+alert("OTP sent to your email: " + currentOTP);
+
+}
+
+function verifyOTP(){
+
+const enteredOTP = document.getElementById("otpInput").value;
+
+const savedOTP = localStorage.getItem("otp");
+
+if(enteredOTP === savedOTP){
+
+alert("Account created successfully");
+
+}
+else{
+
+alert("Invalid OTP");
+
+}
+
+}
