@@ -46,34 +46,55 @@
     <a class="back" href="../index.html">← Back</a>
   </div>
 
-  <div class="grid-2">
-    <div class="panel glass">
-      <h3>Sign Up</h3>
-      <input class="input" id="name" placeholder="Full Name" />
-      <input class="input" id="email" placeholder="Email" />
-      <input class="input" id="password" type="password" placeholder="Password" />
-      <input type="text" id="otpInput" placeholder="Enter OTP" />
+ <div class="grid-2">
+
+<div class="panel glass">
+
+<h3>Sign Up</h3>
+
+<input class="input" id="name" placeholder="Full Name" />
+
+<input class="input" id="email" placeholder="Email" />
+
+<input class="input" id="password" type="password" placeholder="Password" />
+
+
+<!-- OTP Input -->
+
+<input class="input" type="text" id="otpInput" placeholder="Enter OTP" />
+
+
+<!-- OTP Buttons -->
+
+<div class="actions">
 
 <button type="button" onclick="sendOTP()" class="btn">
 Send OTP
 </button>
 
-<button type="button" onclick="verifyOTP()" class="btn">
+<button type="button" onclick="verifyOTP()" class="btn btn-ghost">
 Verify OTP
 </button>
-      <div class="actions">
-        <button class="btn2 primary" onclick="register()">Create Account</button>
-        <a class="btn2" href="login.html">Go to Login</a>
-      </div>
-      <div id="authMsg" class="note" style="margin-top:12px;">Fill details to create account.</div>
-    </div>
 
-    <div class="panel glass">
-      <h3>Why login?</h3>
-      <p>It makes the project feel like a real product. You can extend it later using Firebase.</p>
-      <p class="small">For now, everything works offline.</p>
-    </div>
-  </div>
+</div>
+
+
+<!-- Create Account -->
+
+<div class="actions">
+
+<button class="btn2 primary" onclick="register()">
+Create Account
+</button>
+
+</div>
+
+
+<p id="authMsg"></p>
+
+</div>
+
+</div>
 </section>
   </main>
 
