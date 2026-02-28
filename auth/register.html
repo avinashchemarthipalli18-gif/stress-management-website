@@ -52,6 +52,15 @@
       <input class="input" id="name" placeholder="Full Name" />
       <input class="input" id="email" placeholder="Email" />
       <input class="input" id="password" type="password" placeholder="Password" />
+      <input type="text" id="otpInput" placeholder="Enter OTP" />
+
+<button type="button" onclick="sendOTP()" class="btn">
+Send OTP
+</button>
+
+<button type="button" onclick="verifyOTP()" class="btn">
+Verify OTP
+</button>
       <div class="actions">
         <button class="btn2 primary" onclick="register()">Create Account</button>
         <a class="btn2" href="login.html">Go to Login</a>
