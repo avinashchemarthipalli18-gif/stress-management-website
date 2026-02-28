@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood • Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+  
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧘</div>
+    <div>
+      <h1>Stress Management Website</h1>
+      <p class="subtitle">Stress Management Suite</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="../pages/breathing.html">Breathing</a>
+    <a href="../pages/quiz.html">Quiz</a>
+    <a href="../pages/mood.html">Mood</a>
+    <a href="../pages/sounds.html">Sounds</a>
+    <a href="../pages/planner.html">Planner</a>
+    <a href="../pages/tips.html">Tips</a>
+    <a href="../pages/insights.html">Insights</a>
+    <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+    <span id="userSlot"></span>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <section class="page glass">
+  <div class="page-head">
+    <div>
+      <h2>😊 Mood Tracker</h2>
+      <p>Pick your mood. It will be saved and shown in Insights.</p>
+    </div>
+    <a class="back" href="../index.html">← Back</a>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel glass">
+      <h3>Choose your mood</h3>
+      <div class="actions">
+        <button class="btn2 primary" onclick="saveMood('Happy 😊')">Happy 😊</button>
+        <button class="btn2 primary" onclick="saveMood('Calm 😌')">Calm 😌</button>
+        <button class="btn2 primary" onclick="saveMood('Stressed 😟')">Stressed 😟</button>
+        <button class="btn2 primary" onclick="saveMood('Sad 😢')">Sad 😢</button>
+      </div>
+
+      <div class="note" style="margin-top:12px;">
+        <b>Today's Mood:</b> <span id="todayMood">Not Selected</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn2 danger" onclick="clearMood()">Clear Mood</button>
+      </div>
+    </div>
+
+    <div class="panel glass">
+      <h3>Small suggestion</h3>
+      <p id="moodSuggestion">Select a mood to see a suggestion.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer"><p>© 2026 Stress Management Website</p></footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/insights.js"></script><script src="../assets/js/mood.js"></script>
+  <script>window.addEventListener("DOMContentLoaded", updateUserUI);</script>
+<script src='emoji.js'></script>
+</body>
+</html>

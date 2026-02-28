@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips • Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+  
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧘</div>
+    <div>
+      <h1>Stress Management Website</h1>
+      <p class="subtitle">Stress Management Suite</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="../pages/breathing.html">Breathing</a>
+    <a href="../pages/quiz.html">Quiz</a>
+    <a href="../pages/mood.html">Mood</a>
+    <a href="../pages/sounds.html">Sounds</a>
+    <a href="../pages/planner.html">Planner</a>
+    <a href="../pages/tips.html">Tips</a>
+    <a href="../pages/insights.html">Insights</a>
+    <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+    <span id="userSlot"></span>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <section class="page glass">
+  <div class="page-head">
+    <div>
+      <h2>💡 Stress Management Tips</h2>
+      <p>Small habits that reduce stress over time.</p>
+    </div>
+    <a class="back" href="../index.html">← Back</a>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel glass">
+      <h3>Daily Tips</h3>
+      <ul class="small" style="margin-top:10px; padding-left:18px; line-height:1.9;">
+        <li>Drink water and eat on time.</li>
+        <li>Sleep at least 7 hours daily.</li>
+        <li>Take 5-minute breaks while studying/working.</li>
+        <li>Try journaling to release thoughts.</li>
+        <li>Do light exercise or stretching.</li>
+      </ul>
+
+      <div class="actions">
+        <button class="btn2 primary" onclick="randomTip()">Get Random Tip</button>
+      </div>
+
+      <div id="randomTipBox" class="note" style="margin-top:12px;">Click the button to get a tip.</div>
+    </div>
+
+    <div class="panel glass">
+      <h3>Extra suggestion</h3>
+      <p>Use the planner to add 3 small tasks. Then do a breathing cycle before starting.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer"><p>© 2026 Stress Management Website</p></footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/tips.js"></script>
+  <script>window.addEventListener("DOMContentLoaded", updateUserUI);</script>
+<script src='emoji.js'></script>
+</body>
+</html>

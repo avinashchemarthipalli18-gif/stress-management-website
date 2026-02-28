@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login • Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+  
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧘</div>
+    <div>
+      <h1>Stress Management Website</h1>
+      <p class="subtitle">Stress Management Suite</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="../pages/breathing.html">Breathing</a>
+    <a href="../pages/quiz.html">Quiz</a>
+    <a href="../pages/mood.html">Mood</a>
+    <a href="../pages/sounds.html">Sounds</a>
+    <a href="../pages/planner.html">Planner</a>
+    <a href="../pages/tips.html">Tips</a>
+    <a href="../pages/insights.html">Insights</a>
+    <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+    <span id="userSlot"></span>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <section class="page glass">
+  <div class="page-head">
+    <div>
+      <h2>🔐 Login</h2>
+      <p>Login to access your profile (demo system).</p>
+    </div>
+    <a class="back" href="../index.html">← Back</a>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel glass">
+      <h3>Login</h3>
+      <input class="input" id="email" placeholder="Email" />
+      <input class="input" id="password" type="password" placeholder="Password" />
+      <div class="actions">
+        <button class="btn2 primary" onclick="login()">Login</button>
+        <a class="btn2" href="register.html">Create Account</a>
+      </div>
+      <div id="authMsg" class="note" style="margin-top:12px;">Enter email and password.</div>
+    </div>
+
+    <div class="panel glass">
+      <h3>Note</h3>
+      <p>This login works using browser storage. It is safe for demo and college projects.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer"><p>© 2026 Stress Management Website</p></footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script>window.addEventListener("DOMContentLoaded", updateUserUI);</script>
+<script src='emoji.js'></script>
+</body>
+</html>

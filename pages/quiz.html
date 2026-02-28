@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz • Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+  
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧘</div>
+    <div>
+      <h1>Stress Management Website</h1>
+      <p class="subtitle">Stress Management Suite</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="../pages/breathing.html">Breathing</a>
+    <a href="../pages/quiz.html">Quiz</a>
+    <a href="../pages/mood.html">Mood</a>
+    <a href="../pages/sounds.html">Sounds</a>
+    <a href="../pages/planner.html">Planner</a>
+    <a href="../pages/tips.html">Tips</a>
+    <a href="../pages/insights.html">Insights</a>
+    <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+    <span id="userSlot"></span>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <section class="page glass">
+  <div class="page-head">
+    <div>
+      <h2>📋 Stress Level Quiz</h2>
+      <p>Answer 4 quick questions and save your result into weekly insights.</p>
+    </div>
+    <a class="back" href="../index.html">← Back</a>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel glass">
+      <h3>Quiz</h3>
+      <form id="quizForm">
+        <label class="small">1) I feel overwhelmed often:</label>
+        <select class="input" name="q1"><option value="0">No</option><option value="1">Sometimes</option><option value="2">Yes</option></select>
+
+        <label class="small">2) I have trouble sleeping:</label>
+        <select class="input" name="q2"><option value="0">No</option><option value="1">Sometimes</option><option value="2">Yes</option></select>
+
+        <label class="small">3) I feel anxious during the day:</label>
+        <select class="input" name="q3"><option value="0">No</option><option value="1">Sometimes</option><option value="2">Yes</option></select>
+
+        <label class="small">4) I get irritated easily:</label>
+        <select class="input" name="q4"><option value="0">No</option><option value="1">Sometimes</option><option value="2">Yes</option></select>
+
+        <div class="actions">
+          <button class="btn2 primary" type="button" onclick="calculateStress()">Check Stress</button>
+          <button class="btn2" type="reset" onclick="resetResult()">Reset</button>
+        </div>
+      </form>
+
+      <div id="quizResult" class="note" style="margin-top:12px;">Your result will appear here.</div>
+    </div>
+
+    <div class="panel glass">
+      <h3>What to do next</h3>
+      <p>If your score is high, try <b>Breathing</b> + <b>Sounds</b> for 5 minutes.</p>
+      <p class="small">This quiz is not a medical diagnosis.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer"><p>© 2026 Stress Management Website</p></footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/insights.js"></script><script src="../assets/js/quiz.js"></script>
+  <script>window.addEventListener("DOMContentLoaded", updateUserUI);</script>
+<script src='emoji.js'></script>
+</body>
+</html>

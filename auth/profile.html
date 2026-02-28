@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile • Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+  
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧘</div>
+    <div>
+      <h1>Stress Management Website</h1>
+      <p class="subtitle">Stress Management Suite</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="../pages/breathing.html">Breathing</a>
+    <a href="../pages/quiz.html">Quiz</a>
+    <a href="../pages/mood.html">Mood</a>
+    <a href="../pages/sounds.html">Sounds</a>
+    <a href="../pages/planner.html">Planner</a>
+    <a href="../pages/tips.html">Tips</a>
+    <a href="../pages/insights.html">Insights</a>
+    <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+    <span id="userSlot"></span>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <section class="page glass">
+  <div class="page-head">
+    <div>
+      <h2>👤 Profile</h2>
+      <p>Your account details (demo) + quick actions.</p>
+    </div>
+    <a class="back" href="../index.html">← Back</a>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel glass">
+      <h3>Account</h3>
+      <div class="note" id="profileBox">Loading...</div>
+      <div class="actions">
+        <a class="btn2 primary" href="../pages/insights.html">Open Insights</a>
+        <button class="btn2 danger" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="panel glass">
+      <h3>Project uniqueness</h3>
+      <p>This project includes multi-page navigation, login/profile, light/dark mode, and weekly insights charts — all without external libraries.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer"><p>© 2026 Stress Management Website</p></footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script>
+window.addEventListener("DOMContentLoaded", () => {
+  const u = getCurrentUser();
+  if(!u){ window.location.href = "login.html"; return; }
+  const created = new Date(u.createdAt).toLocaleString();
+  document.getElementById("profileBox").innerHTML =
+    `<b>Name:</b> ${u.name}<br><b>Email:</b> ${u.email}<br><b>Joined:</b> ${created}`;
+});
+</script>
+  <script>window.addEventListener("DOMContentLoaded", updateUserUI);</script>
+<script src='emoji.js'></script>
+</body>
+</html>

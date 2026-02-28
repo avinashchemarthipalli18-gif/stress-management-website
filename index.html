@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🧘</div>
+      <div>
+        <h1>Stress Management Website</h1>
+        <p class="subtitle">Stress Management Suite</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="pages/breathing.html">Breathing</a>
+      <a href="pages/quiz.html">Quiz</a>
+      <a href="pages/mood.html">Mood</a>
+      <a href="pages/sounds.html">Sounds</a>
+      <a href="pages/planner.html">Planner</a>
+      <a href="pages/tips.html">Tips</a>
+      <a href="pages/insights.html">Insights</a>
+      <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+      <span id="userSlot"></span>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero glass">
+      <div class="hero-left">
+        <h2>Calm your mind. Track your progress.</h2>
+        <p>
+          A unique multi-page stress management website with guided breathing, mood tracking,
+          stress quiz, relaxing sounds, daily planner, tips, and weekly insights.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="pages/breathing.html">Start Breathing</a>
+          <a class="btn btn-ghost" href="pages/insights.html">View Insights</a>
+          <a class="btn btn-ghost" href="auth/login.html">Login</a>
+        </div>
+
+        <div class="mini-cards">
+          <div class="mini glass"><h3>🫁 Breathing</h3><p>Inhale–hold–exhale timer with progress bar.</p></div>
+          <div class="mini glass"><h3>📋 Quiz</h3><p>Instant stress score + saved history.</p></div>
+          <div class="mini glass"><h3>😊 Mood</h3><p>Daily mood check-in saved to history.</p></div>
+          <div class="mini glass"><h3>🎧 Sounds</h3><p>Rain/Forest/Waves for focus & rest.</p></div>
+          <div class="mini glass"><h3>🗓 Planner</h3><p>Task list stored in your browser.</p></div>
+          <div class="mini glass"><h3>📈 Insights</h3><p>Weekly charts (quiz + mood) + KPIs.</p></div>
+        </div>
+      </div>
+
+      <div class="hero-right glass">
+        <h3>Quick Start</h3>
+        <p class="muted">Pick one right now:</p>
+
+        <div class="quick-grid">
+          <a class="quick" href="pages/breathing.html"><span class="q-icon">🫁</span><span><b>2-min Breathing</b><small>Reset your mind</small></span></a>
+          <a class="quick" href="pages/quiz.html"><span class="q-icon">📋</span><span><b>Stress Quiz</b><small>Check your level</small></span></a>
+          <a class="quick" href="pages/mood.html"><span class="q-icon">😊</span><span><b>Mood Check-in</b><small>Save today’s mood</small></span></a>
+          <a class="quick" href="pages/insights.html"><span class="q-icon">📈</span><span><b>Weekly Insights</b><small>See progress</small></span></a>
+        </div>
+
+        <div class="note">
+          <b>Unique feature:</b> Your quiz scores + mood check-ins are saved and shown in Insights charts.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Stress Management Website • Multi-page • Light/Dark Mode • Insights</p>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      updateUserUI();
+    });
+  </script>
+<script src='emoji.js'></script>
+</body>
+</html>

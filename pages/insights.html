@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights • Stress Management Website</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="emoji_style.css">
+</head>
+<body>
+<div class='emoji-bg' id='emoji-bg'></div>
+  <div class="bg"></div>
+  
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧘</div>
+    <div>
+      <h1>Stress Management Website</h1>
+      <p class="subtitle">Stress Management Suite</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="../pages/breathing.html">Breathing</a>
+    <a href="../pages/quiz.html">Quiz</a>
+    <a href="../pages/mood.html">Mood</a>
+    <a href="../pages/sounds.html">Sounds</a>
+    <a href="../pages/planner.html">Planner</a>
+    <a href="../pages/tips.html">Tips</a>
+    <a href="../pages/insights.html">Insights</a>
+    <button id="themeBtn" class="icon-btn" onclick="toggleTheme()">🌙</button>
+    <span id="userSlot"></span>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <section class="page glass">
+  <div class="page-head">
+    <div>
+      <h2>📈 Weekly Insights</h2>
+      <p>Your saved <b>quiz scores</b> and <b>mood check-ins</b> are shown here.</p>
+    </div>
+    <a class="back" href="../index.html">← Back</a>
+  </div>
+
+  <div class="kpi">
+    <div class="box glass"><b id="kpiQuiz">—</b><span>Latest Quiz Score</span></div>
+    <div class="box glass"><b id="kpiMood">—</b><span>Latest Mood</span></div>
+    <div class="box glass"><b id="kpiTasks">0</b><span>Tasks in Planner</span></div>
+  </div>
+
+  <div class="grid-2" style="margin-top:14px;">
+    <div class="panel glass">
+      <h3>Quiz Score (Last 7 days)</h3>
+      <canvas id="quizChart" width="520" height="220" style="width:100%; margin-top:12px;"></canvas>
+      <p class="small">Score range: 0 to 8</p>
+    </div>
+
+    <div class="panel glass">
+      <h3>Mood Trend (Last 7 days)</h3>
+      <canvas id="moodChart" width="520" height="220" style="width:100%; margin-top:12px;"></canvas>
+      <p class="small">Mood scale: Sad → Stressed → Calm → Happy</p>
+    </div>
+  </div>
+
+  <div class="note"><b>Unique idea:</b> Insights built with pure JavaScript + Canvas (no libraries).</div>
+</section>
+  </main>
+
+  <footer class="footer"><p>© 2026 Stress Management Website</p></footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/insights.js"></script>
+  <script>window.addEventListener("DOMContentLoaded", updateUserUI);</script>
+<script src='emoji.js'></script>
+</body>
+</html>
